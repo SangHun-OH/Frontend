@@ -22,77 +22,112 @@
             crossorigin="anonymous"></script>
 
     <title>부트스트랩 연습</title>
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
     <style>
-        .wrap{
-            width : 900px;
-            margin : auto;
+        * {
+            font-family: 'Do Hyeon', sans-serif;
+        }
+
+        .wrap {
+            width: 900px;
+            margin: auto;
+        }
+
+        .comment {
+            color: royalblue;
+            font-weight: bold;
+        }
+
+        .PostBox {
+            width: 500px;
+            margin: 0 auto 30px auto;
+
+            padding: 20px;
+            border-radius: 3px;
+            border: medium dashed black;
         }
     </style>
 
 </head>
 <body>
-<div class = "wrap">
+<div class="wrap">
     <div class="jumbotron">
-        <h1 class="display-4">Hello, world!</h1>
-        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
-            featured content or information.</p>
+        <h1 class="display-4">나홀로 링크 메모장</h1>
+        <p class="lead">중요한 정보를 저장하고, 나중에 보세요!</p>
         <hr class="my-4">
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
         <p class="lead">
-            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+            <a class="btn btn-primary btn-lg" href="#" role="button">포스팅 열기</a>
         </p>
+    </div>
+    <div class="PostBox">
+        <div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">기사 URL을 넣어주세요</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                       placeholder="여기에요!">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">코멘트 입력</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">저장</button>
+        </div>
     </div>
     <div class="card-columns">
         <div class="card">
             <img class="card-img-top" src="http://image.dongascience.com/Photo/2017/03/14900752352661.jpg"
                  alt="Card image cap">
             <div class="card-body">
-                <h5 class="card-title">CUTE DOG!!</h5>
-                <p class="card-text">정말 귀여운 강아지네요 하하!</p>
+                <a href="http://naver.com/" class="card-title">여기 기사 제목이 들어가죠</a>
+                <p class="card-text">기사의 요약 내용이 들어갑니다. </p>
+                <p class="card-text comment">여기에 코멘트가 들어갑니다.</p>
             </div>
         </div>
         <div class="card">
             <img class="card-img-top" src="http://image.dongascience.com/Photo/2017/03/14900752352661.jpg"
                  alt="Card image cap">
             <div class="card-body">
-                <h5 class="card-title">CUTE DOG!!</h5>
-                <p class="card-text">정말 귀여운 강아지네요 하하!</p>
+                <a href="http://naver.com/" class="card-title">여기 기사 제목이 들어가죠</a>
+                <p class="card-text">기사의 요약 내용이 들어갑니다. </p>
+                <p class="card-text comment">여기에 코멘트가 들어갑니다.</p>
             </div>
         </div>
         <div class="card">
             <img class="card-img-top" src="http://image.dongascience.com/Photo/2017/03/14900752352661.jpg"
                  alt="Card image cap">
             <div class="card-body">
-                <h5 class="card-title">CUTE DOG!!</h5>
-                <p class="card-text">정말 귀여운 강아지네요 하하!</p>
+                <a href="http://naver.com/" class="card-title">여기 기사 제목이 들어가죠</a>
+                <p class="card-text">기사의 요약 내용이 들어갑니다. </p>
+                <p class="card-text comment">여기에 코멘트가 들어갑니다.</p>
             </div>
         </div>
         <div class="card">
             <img class="card-img-top" src="http://image.dongascience.com/Photo/2017/03/14900752352661.jpg"
                  alt="Card image cap">
             <div class="card-body">
-                <h5 class="card-title">CUTE DOG!!</h5>
-                <p class="card-text">정말 귀여운 강아지네요 하하!</p>
+                <a href="http://naver.com/" class="card-title">여기 기사 제목이 들어가죠</a>
+                <p class="card-text">기사의 요약 내용이 들어갑니다. </p>
+                <p class="card-text comment">여기에 코멘트가 들어갑니다.</p>
             </div>
         </div>
         <div class="card">
             <img class="card-img-top" src="http://image.dongascience.com/Photo/2017/03/14900752352661.jpg"
                  alt="Card image cap">
             <div class="card-body">
-                <h5 class="card-title">CUTE DOG!!</h5>
-                <p class="card-text">정말 귀여운 강아지네요 하하!</p>
+                <a href="http://naver.com/" class="card-title">여기 기사 제목이 들어가죠</a>
+                <p class="card-text">기사의 요약 내용이 들어갑니다. </p>
+                <p class="card-text comment">여기에 코멘트가 들어갑니다.</p>
             </div>
         </div>
         <div class="card">
             <img class="card-img-top" src="http://image.dongascience.com/Photo/2017/03/14900752352661.jpg"
                  alt="Card image cap">
             <div class="card-body">
-                <h5 class="card-title">CUTE DOG!!</h5>
-                <p class="card-text">정말 귀여운 강아지네요 하하!</p>
+                <a href="http://naver.com/" class="card-title">여기 기사 제목이 들어가죠</a>
+                <p class="card-text">기사의 요약 내용이 들어갑니다. </p>
+                <p class="card-text comment">여기에 코멘트가 들어갑니다.</p>
             </div>
         </div>
-
-
     </div>
 </div>
 
