@@ -22,6 +22,7 @@
             crossorigin="anonymous"></script>
 
     <title>부트스트랩 연습</title>
+
     <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
     <style>
         * {
@@ -45,12 +46,20 @@
             padding: 20px;
             border-radius: 3px;
             border: medium dashed black;
+            display: none
         }
     </style>
 
     <script>
-        function hey(){
-            alert('안녕');
+        function open_close() {
+            let status = $('#post-box').css('display');
+            if (status == 'block') {
+                $('#post-box').hide();
+                $('#btn-posting-box').text('포스팅 박스 열기');
+            } else {
+                $('#post-box').show();
+                $('#btn-posting-box').text('포스팅 박스 닫기');
+            }
         }
     </script>
 
@@ -62,14 +71,15 @@
         <p class="lead">중요한 정보를 저장하고, 나중에 보세요!</p>
         <hr class="my-4">
         <p class="lead">
-            <a onclick="hey()" class="btn btn-primary btn-lg" href="#" role="button">포스팅 열기</a>
+            <a onclick="open_close()" id="btn-posting-box" class="btn btn-primary btn-lg" href="#" role="button">포스팅 박스
+                열기</a>
         </p>
     </div>
-    <div class="PostBox">
+    <div class="PostBox" id="post-box">
         <div>
             <div class="form-group">
-                <label for="exampleInputEmail1">기사 URL을 넣어주세요</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                <label>기사 URL을 넣어주세요</label>
+                <input type="email" class="form-control" id="article-url" aria-describedby="emailHelp"
                        placeholder="여기에요!">
             </div>
             <div class="form-group">
@@ -79,7 +89,8 @@
             <button type="submit" class="btn btn-primary">저장</button>
         </div>
     </div>
-    <div class="card-columns">
+
+    <div class="card-columns" id="cards-box">
         <div class="card">
             <img class="card-img-top" src="http://image.dongascience.com/Photo/2017/03/14900752352661.jpg"
                  alt="Card image cap">
