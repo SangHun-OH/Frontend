@@ -48,9 +48,43 @@
             border: medium dashed black;
             display: none
         }
+
     </style>
 
     <script>
+        $(document).ready(function () {
+            $('#cards-box').empty('');
+            listing();
+        });
+
+        function listing() {
+            $.ajax({
+                type: "GET",
+                url: "http://spartacodingclub.shop/post",
+                data: {},
+                success: function (response) {
+                    let articles = response['articles'];
+                    for (let i = 0; i < articles.length; i++) {
+                        let article = articles[i];
+                        let image = article["image"];
+                        let url = article["url"];
+                        let title = article["title"];
+                        let desc = article["desc"];
+                        let comment = article["comment"];
+                        let temp_html = `<div class="card">
+				                             <img class="card-img-top" src="${image}" alt="Card image cap">
+				                             <div class="card-body">
+				                               <a href="${url}" target="_blank" class="card-title">${title}</a>
+				                               <p class="card-text">${desc}</p>
+				                               <p class="card-text comment">${comment}</p>
+				                             </div>
+				                           </div>`;
+                        $('#cards-box').append(temp_html);
+                    }
+                }
+            })
+        }
+
         function open_close() {
             let status = $('#post-box').css('display');
             if (status == 'block') {
@@ -61,10 +95,14 @@
                 $('#btn-posting-box').text('포스팅 박스 닫기');
             }
         }
+
+
     </script>
 
 </head>
+
 <body>
+
 <div class="wrap">
     <div class="jumbotron">
         <h1 class="display-4">나홀로 링크 메모장</h1>
@@ -89,7 +127,6 @@
             <button type="submit" class="btn btn-primary">저장</button>
         </div>
     </div>
-
     <div class="card-columns" id="cards-box">
         <div class="card">
             <img class="card-img-top" src="http://image.dongascience.com/Photo/2017/03/14900752352661.jpg"
